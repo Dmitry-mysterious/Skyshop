@@ -25,7 +25,7 @@ public class SearchResult {
         return contentType;
     }
 
-    // Статический фабричный метод || SearchResult.fromSearchable(milk) ? ||
+    // Статический фабричный метод || SearchResult::fromSearchable ||
     public static SearchResult fromSearchable(Searchable searchable) {
         return new SearchResult(searchable.getId(), searchable.getSearchableName(), searchable.getContentType());
     }

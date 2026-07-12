@@ -22,7 +22,7 @@ public class SearchService {
 
     public Collection<SearchResult> search(String name) {
         return createSingleCollection().stream()
-                .filter(v -> v.getSearchableName().toLowerCase().contains(name.toLowerCase()))
+                .filter(v -> v.getSearchTerm().toLowerCase().contains(name.toLowerCase()))
                 .map(SearchResult::fromSearchable)
                 .collect(Collectors.toList());
     }
