@@ -44,6 +44,11 @@ public class StorageService {
         storageProduct.put(juice.getId(), juice);
     }
 
+    // Получение продукта по id
+    public Optional<Product> getProductById(UUID id) {
+        return Optional.ofNullable(storageProduct.get(id));
+    }
+
     // Вывод всех статей
     public Collection<Article> getAllArticles() {
         return storageArticle.values().stream().toList();
